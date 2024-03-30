@@ -1,0 +1,16 @@
+{
+    "builders": [
+        {
+            "type": "docker",
+            "image": "ubuntu",
+            "commit": true, 
+            "__comment__": "upper commit Packer to commit the container when the build is complete, effectively saving the changes made during the provisioners' execution as a new Docker image."
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "install.sh"
+        }
+    ]
+}
